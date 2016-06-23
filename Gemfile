@@ -5,7 +5,12 @@ ruby '2.2.2'
 
 gem 'rails', '4.2.5.1'
 
-gem 'sqlite3'
+group :production do
+  gem 'pg'
+end
+group :development, :test do
+  gem 'sqlite3'
+end
 
 gem 'sass-rails', '~> 5.0'
 
