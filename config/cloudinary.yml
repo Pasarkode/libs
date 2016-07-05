@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: taufan
+  api_key: '488569332593927'
+  api_secret: kzQ27paZsLk5fMNBvA8QWbxjpYY
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: taufan
+  api_key: '488569332593927'
+  api_secret: kzQ27paZsLk5fMNBvA8QWbxjpYY
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: taufan
+  api_key: '488569332593927'
+  api_secret: kzQ27paZsLk5fMNBvA8QWbxjpYY
+  enhance_image_tag: true
+  static_image_support: false
