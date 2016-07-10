@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Books</h1>
+<div class="jumbotron">
+  <h2>Libs is The Best Rating Books Place</h2>
+  <h3>Berikan Kritikan dan Penilaianmu Disini.<br>
+      Beberapa masukan dan kritikan akan sangat membantu kami.</h3>
+</div>
 
 <table class="table table-hover table-condensed">
   <thead>
@@ -35,3 +39,4 @@
 <br>
 
 <%= link_to 'New Book', new_book_path, class: "btn btn-link" %>
+<%= cl_image_tag("books_lpzrvk.png", :height=>209, :width=>1030, :crop=>"scale") %>
