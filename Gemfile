@@ -22,6 +22,7 @@ gem 'rails_12factor', group: :production
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'figaro'
+gem 'devise'
 gem 'mini_magick'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
