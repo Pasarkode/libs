@@ -1,36 +1,48 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-3">
+    <%= image_tag @book.image_url %>
+    <h2>
+      <%= @book.title %>
+    </h2>
 
+    <p>
+      <strong>Description:</strong>
+      <%= @book.description %>
+    </p>
 
-<%= image_tag @book.image_url %>
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
+    <p>
+      <strong>Year:</strong>
+      <%= @book.year %>
+    </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @book.description %>
-</p>
+    <p>
+      <strong>Author:</strong>
+      <%= @book.author %>
+    </p>
 
-<p>
-  <strong>Year:</strong>
-  <%= @book.year %>
-</p>
+    <p>
+      <strong>Publisher:</strong>
+      <%= @book.publisher %>
+    </p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
+    <p>
+      <strong>Pages:</strong>
+      <%= @book.pages %>
+    </p>
+    <%= link_to "Write a Review", new_book_review_path(@book), class: "btn btn-primary" %>
+  </div>
 
-<p>
-  <strong>Publisher:</strong>
-  <%= @book.publisher %>
-</p>
+    <div class="col-md-9">
+    <%  if @reviews.blank? %>
+      <h3>Belum ada Review untuk Buku ini!</h3>
+      <% else %>
+      <% @reviews.each do |review| %>
+        <p><%= review.rating %></p>
+        <p><%= review.comment %></p>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
 
-<p>
-  <strong>Pages:</strong>
-  <%= @book.pages %>
-</p>
-<%= link_to "Write a Review", new_book_review_path(@book), class: "btn btn-primary" %>
 <%= link_to 'Edit', edit_book_path(@book), class: "btn btn-link" %> |
 <%= link_to 'Back', books_path, class: "btn btn-link" %>
