@@ -2,6 +2,8 @@ class Book < ActiveRecord::Base
 #  attr_accessible :image
   mount_uploader :image, ImageUploader
 
+  searchkick
+
   has_many :reviews
 
   validates :title, :description, :year, :author, :publisher, :pages, :image, presence: true
