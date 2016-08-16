@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:seacrh, :index, :show]
+  before_action :authenticate_user!, except: [:search, :index, :show]
   before_action :check_user, except: [:search, :index, :show]
 
   def search
