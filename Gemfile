@@ -25,6 +25,7 @@ gem 'figaro'
 gem 'devise'
 gem 'mini_magick'
 gem 'searchkick'
+gem 'attachinary'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.

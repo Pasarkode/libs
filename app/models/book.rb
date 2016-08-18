@@ -6,7 +6,7 @@ class Book < ActiveRecord::Base
 
   has_many :reviews
 
-  validates :title, :description, :year, :author, :publisher, :pages, :image, presence: true
+  validates :title, :description, :year, :author, :publisher, :pages, presence: true
   validates :year, format: { with: /\d{4}/,
     message: "only allows format eg: 2016" }
   validates :pages, format: { with: /\d/,
