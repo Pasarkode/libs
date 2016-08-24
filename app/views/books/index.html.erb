@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
-
+<% if user_signed_in? && current_user.admin? %>
+  <h4>Selamat Datang Admin!</h4>
+<% elsif user_signed_in? %>
+  <h4>Selamat Datang User!</h1>
+<% else %>
+  <h4> Selamat Datang! </h4>
+<% end %>
 <div class="jumbotron">
   <h2>Libs is The Best Rating Books Place</h2>
   <h3>Berikan Kritikan dan Penilaianmu Disini.<br>
@@ -9,12 +15,12 @@
 <table class="table table-hover table-condensed">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Year</th>
-      <th>Author</th>
-      <th>Publisher</th>
-      <th>Pages</th>
+      <th>Judul</th>
+      <th>Deskripsi</th>
+      <th>Tahun</th>
+      <th>Penulis</th>
+      <th>Penerbit</th>
+      <th>Jumlah Halaman</th>
       <% if user_signed_in? && current_user.admin? %>
         <th colspan="2"></th>
       <% end %>
