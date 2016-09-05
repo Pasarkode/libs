@@ -2,7 +2,7 @@
 <% if user_signed_in? && current_user.admin? %>
   <h4>Selamat Datang Admin!</h4>
 <% elsif user_signed_in? %>
-  <h4>Selamat Datang User!</h1>
+  <h4>Selamat Datang Member</h4>
 <% else %>
   <h4> Selamat Datang! </h4>
 <% end %>
@@ -49,4 +49,4 @@
 <% if user_signed_in? && current_user.admin? %>
   <%= link_to 'New Book', new_book_path, class: "btn btn-link" %>
 <% end %>
-<%= cl_image_tag("books_lpzrvk.png", :height=>209, :width=>1030, :crop=>"scale") %>
+<%= cl_image_tag("books_yhkybl.jpg", :height=>209, :width=>1030, :crop=>"scale") %>
